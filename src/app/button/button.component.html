@@ -1,10 +1,18 @@
 <button
   [type]="type"
   [attr.aria-label]="label"
-  class="btn btn-{{ buttonStyle }} btn-size-{{ size }} btn-shape-{{ shape }} {{customClass}}"
+  class="btn btn-{{ buttonStyle }} btn-size-{{ size }} btn-shape-{{ shape }} {{
+    customClass
+  }}"
   [ngClass]="expanded ? 'btn-expanded' : ''"
   [disabled]="disabled"
   [ngStyle]="customStyle"
 >
+  @if(icon && iconPosition === 'left'){
+  <span class="material-symbols-outlined"> delete </span>
+  }
   {{ label }}
+  @if(icon && iconPosition === 'right'){
+  <span class="material-symbols-outlined"> delete </span>
+  }
 </button>

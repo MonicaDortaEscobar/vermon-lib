@@ -15,10 +15,8 @@ export class ButtonComponent {
   @Input() shape: 'normal' | 'circle' | 'square' = 'normal';
   @Input() expanded: boolean = false;
   @Input() disabled: boolean = false;
-  @Input() icon: string = '';
+  @Input() icon: string = 'delete';
   @Input() customClass: string = '';
   @Input() iconPosition: 'left' | 'right' = 'left';
-  @Input() textTransform: 'none' | 'uppercase' | 'lowercase' | 'capitalize' =
-    'none';
   @Input() customStyle: { [key: string]: string } = {};
 }

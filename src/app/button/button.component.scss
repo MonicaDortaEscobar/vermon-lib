@@ -11,9 +11,9 @@
   &-primary {
     background-color: $btn-primary;
     color: $btn-secundary;
-    &:hover,
-    &:active,
-    &:focus {
+    &:not(:disabled):hover,
+    &:not(:disabled):active,
+    &:not(:disabled):focus {
       background-color: $btn-primary-hover;
     }
   }
@@ -21,9 +21,9 @@
     background-color: $btn-secundary;
     color: $btn-primary;
     border: 1px solid $btn-primary;
-    &:hover,
-    &:active,
-    &:focus {
+    &:not(:disabled):hover,
+    &:not(:disabled):active,
+    &:not(:disabled):focus {
       background-color: $btn-secundary-hover;
     }
   }
@@ -45,13 +45,13 @@
     width: 100%;
   }
 
-  &-shape-circle{
+  &-shape-circle {
     border-radius: 50%;
     min-width: 40px;
     height: 40px;
   }
 
-  &-shape-square{
+  &-shape-square {
     min-width: 40px;
     height: 40px;
   }
@@ -59,8 +59,5 @@
   &:disabled {
     cursor: default;
     opacity: 0.6;
-    &:hover {
-      box-shadow: none;
-    }
   }
 }

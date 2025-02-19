@@ -2,30 +2,26 @@ import { Meta, moduleMetadata, StoryObj } from '@storybook/angular';
 import { ButtonComponent } from './button.component';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatIconModule } from '@angular/material/icon';
 
 const meta: Meta<ButtonComponent> = {
   title: 'Components/Button',
   component: ButtonComponent,
   decorators: [
     moduleMetadata({
-      imports: [CommonModule, MatIconModule],
+      imports: [CommonModule],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
     }),
   ],
   tags: ['autodocs'],
   args: {
-    label: 'Botón',
     type: 'button',
     buttonStyle: 'primary',
     size: 'medium',
     shape: 'normal',
     disabled: false,
     expanded: false,
-    customStyle: {
-      'text-transform': 'uppercase',
-    },
     customClass: '',
+    iconPosition:'left'
   },
   argTypes: {
     label: {
@@ -108,16 +104,89 @@ const meta: Meta<ButtonComponent> = {
       },
       description: 'Button with width: 100%.',
     },
+    icon: {
+      table: {
+        category: 'Icon',
+      },
+      control: {
+        type: 'text',
+      },
+      description: 'Icon class.',
+    },
+    iconPosition: {
+      table: {
+        category: 'Icon',
+      },
+      control: {
+        type: 'select',
+      },
+      options: ['left', 'right'],
+      description: 'Select icon position.',
+    },
   },
 };
 
 export default meta;
 type Story = StoryObj<ButtonComponent>;
 
-export const Primary: Story = {
+export const Normal: Story = {
   args: {
     label: 'Botón',
     type: 'button',
     buttonStyle: 'primary',
+    size: 'medium',
+    shape: 'normal',
+    disabled: false,
+    expanded: false,
+    customClass: '',
+  },
+};
+
+export const Icon_Text: Story = {
+  args: {
+    label: 'Botón',
+    type: 'button',
+    buttonStyle: 'primary',
+    size: 'medium',
+    shape: 'normal',
+    disabled: false,
+    expanded: false,
+    icon: 'fa fa-user',
+    customStyle: {
+      'text-transform': 'uppercase',
+    },
+    customClass: ''
+  },
+};
+
+export const Icon: Story = {
+  args: {
+    type: 'button',
+    buttonStyle: 'primary',
+    size: 'medium',
+    shape: 'circle',
+    disabled: false,
+    expanded: false,
+    icon: 'fa fa-user',
+    customClass: ''
+  },
+};
+
+export const Custom_Button: Story = {
+  args: {
+    label: 'Botón',
+    type: 'button',
+    buttonStyle: 'primary',
+    size: 'large',
+    shape: 'normal',
+    disabled: false,
+    expanded: true,
+    icon: 'fa fa-user',
+    customStyle: {
+      'text-transform': 'uppercase',
+      'color': 'darkgray',
+      'background-color': 'pink'
+    },
+    customClass: ''
   },
 };

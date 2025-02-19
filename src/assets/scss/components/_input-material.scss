@@ -1,0 +1,55 @@
+@import '../../scss/components/input';
+
+.mat-mdc-form-field-subscript-wrapper {
+  height: 0;
+}
+
+.mat-mdc-form-field {
+  width: 100%;
+}
+
+.mat-mdc-text-field-wrapper.mdc-text-field--outlined .mat-mdc-form-field-infix {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.mat-mdc-form-field-flex {
+  height: 39.2px;
+}
+
+.mat-mdc-form-field-infix {
+  min-height: 39.2px !important;
+  height: 39.2px !important;
+  display: flex;
+}
+
+.mdc-text-field--outlined {
+  padding-left: 12px !important;
+}
+
+.mdc-notched-outline {
+  opacity: 0;
+}
+
+.input-group {
+  background-clip: padding-box !important;
+  border-radius: var(--bs-border-radius) !important;
+  border: 2px solid $primary;
+  color: $color-dark-light !important;
+  transition: border-color 0.3s !important;
+}
+
+.color-border-success {
+  border: 2px solid $input-valid-border-color !important;
+  transition: border-color 0.3s !important;
+}
+
+.color-border-error {
+  border: 2px solid var(--bs-form-invalid-border-color) !important;
+  transition: border-color 0.3s !important;
+}
+
+.bg-disabled {
+  background-color: $input-disabled-bg !important;
+  border-radius: inherit;
+}

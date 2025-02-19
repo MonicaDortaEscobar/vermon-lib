@@ -1,1 +1,5 @@
-@import './colors'
+@import './assets/scss/colors.scss';
+@import './assets/scss/font/font.scss';
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

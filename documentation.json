@@ -101,7 +101,7 @@
         },
         {
             "name": "ButtonComponent",
-            "id": "component-ButtonComponent-59b309b2ca36fd88cd324383e16484367438b0dd636cb2ed17dd1aa3ca73e2958c6e266aa69a1a5e1e3afc2c8afe169b6a737e8f3cb883e80b0db60410a613e8",
+            "id": "component-ButtonComponent-c104b9c3ae399154fb23a7bfc62515336659e2e584961fc296fa5b1f071366e127aa766b0e23c131b99c18552c3238ceda2491a29d1a9da2ca13aa497a796be5",
             "file": "src/app/button/button.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -122,12 +122,39 @@
                     "defaultValue": "'primary'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 12,
+                    "line": 13,
                     "type": "\"primary\" | \"secundary\"",
                     "decorators": []
                 },
                 {
+                    "name": "customClass",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 19,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "customStyle",
+                    "defaultValue": "{}",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 21,
+                    "type": "literal type",
+                    "decorators": []
+                },
+                {
                     "name": "disabled",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 17,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "expanded",
                     "defaultValue": "false",
                     "deprecated": false,
                     "deprecationMessage": "",
@@ -136,20 +163,11 @@
                     "decorators": []
                 },
                 {
-                    "name": "expanded",
-                    "defaultValue": "true",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 15,
-                    "type": "boolean",
-                    "decorators": []
-                },
-                {
                     "name": "icon",
-                    "defaultValue": "''",
+                    "defaultValue": "'delete'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 17,
+                    "line": 18,
                     "type": "string",
                     "decorators": []
                 },
@@ -158,7 +176,7 @@
                     "defaultValue": "'left'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 18,
+                    "line": 20,
                     "type": "\"left\" | \"right\"",
                     "decorators": []
                 },
@@ -167,7 +185,7 @@
                     "defaultValue": "''",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 10,
+                    "line": 11,
                     "type": "string",
                     "decorators": []
                 },
@@ -176,7 +194,7 @@
                     "defaultValue": "'normal'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 14,
+                    "line": 15,
                     "type": "\"normal\" | \"circle\" | \"square\"",
                     "decorators": []
                 },
@@ -185,7 +203,7 @@
                     "defaultValue": "'medium'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 13,
+                    "line": 14,
                     "type": "\"small\" | \"medium\" | \"large\"",
                     "decorators": []
                 },
@@ -194,7 +212,7 @@
                     "defaultValue": "'button'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 11,
+                    "line": 12,
                     "type": "\"button\" | \"reset\" | \"submit\"",
                     "decorators": []
                 }
@@ -207,17 +225,22 @@
             "hostBindings": [],
             "hostListeners": [],
             "standalone": false,
-            "imports": [],
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                }
+            ],
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-button',\r\n  imports: [],\r\n  templateUrl: './button.component.html',\r\n  styleUrl: './button.component.scss',\r\n})\r\nexport class ButtonComponent {\r\n  @Input() label: string = '';\r\n  @Input() type: 'button' | 'reset' | 'submit' = 'button';\r\n  @Input() buttonStyle: 'primary' | 'secundary' = 'primary';\r\n  @Input() size: 'small' | 'medium' | 'large' = 'medium';\r\n  @Input() shape: 'normal' | 'circle' | 'square' = 'normal';\r\n  @Input() expanded: boolean = true;\r\n  @Input() disabled: boolean = false;\r\n  @Input() icon: string = '';\r\n  @Input() iconPosition: 'left' | 'right' = 'left';\r\n}\r\n",
+            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { Component, Input } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-button',\r\n  imports: [CommonModule],\r\n  templateUrl: './button.component.html',\r\n  styleUrl: './button.component.scss',\r\n})\r\nexport class ButtonComponent {\r\n  @Input() label: string = '';\r\n  @Input() type: 'button' | 'reset' | 'submit' = 'button';\r\n  @Input() buttonStyle: 'primary' | 'secundary' = 'primary';\r\n  @Input() size: 'small' | 'medium' | 'large' = 'medium';\r\n  @Input() shape: 'normal' | 'circle' | 'square' = 'normal';\r\n  @Input() expanded: boolean = false;\r\n  @Input() disabled: boolean = false;\r\n  @Input() icon: string = 'delete';\r\n  @Input() customClass: string = '';\r\n  @Input() iconPosition: 'left' | 'right' = 'left';\r\n  @Input() customStyle: { [key: string]: string } = {};\r\n}\r\n",
             "styleUrl": "./button.component.scss",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",
             "extends": [],
-            "templateData": "<button\r\n  [type]=\"type\"\r\n  [attr.aria-label]=\"label\"\r\n  class=\"btn btn-{{ buttonStyle }} btn-size-{{ size }} btn-shape-{{ shape }}\"\r\n  [ngClass]=\"expanded ? 'btn-expanded' : ''\"\r\n  [disabled]=\"disabled\"\r\n>\r\n  {{ label }}\r\n</button>\r\n"
+            "templateData": "<button\r\n  [type]=\"type\"\r\n  [attr.aria-label]=\"label\"\r\n  class=\"btn btn-{{ buttonStyle }} btn-size-{{ size }} btn-shape-{{ shape }} {{\r\n    customClass\r\n  }}\"\r\n  [ngClass]=\"expanded ? 'btn-expanded' : ''\"\r\n  [disabled]=\"disabled\"\r\n  [ngStyle]=\"customStyle\"\r\n>\r\n  @if(icon && iconPosition === 'left'){\r\n  <i [ngClass]=\"icon\"></i>\r\n  } @if(label){\r\n  <span class=\"btn-label\">{{ label }}</span>\r\n  } @if(icon && iconPosition === 'right'){\r\n  <i [ngClass]=\"icon\"></i>\r\n  }\r\n</button>\r\n"
         }
     ],
     "modules": [
@@ -246,50 +269,6 @@
                 {
                     "type": "exports",
                     "elements": []
-                },
-                {
-                    "type": "bootstrap",
-                    "elements": []
-                },
-                {
-                    "type": "classes",
-                    "elements": []
-                }
-            ]
-        },
-        {
-            "name": "ButtonModule",
-            "id": "module-ButtonModule-fb9a43e9ab173434a921289978257ecdb6d358098cda6063bf25122a832d2e21858537dcd73ba79fd9f0c732d444bd795c88711dd9e1297e029ab25079cb802b",
-            "description": "",
-            "deprecationMessage": "",
-            "deprecated": false,
-            "file": "src/app/button/button.module.ts",
-            "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\nimport { ButtonComponent } from './button.component';\r\n\r\n\r\n\r\n@NgModule({\r\n  declarations: [ButtonComponent],\r\n  exports: [ButtonComponent],\r\n  imports: [\r\n    CommonModule\r\n  ]\r\n})\r\nexport class ButtonModule { }\r\n",
-            "children": [
-                {
-                    "type": "providers",
-                    "elements": []
-                },
-                {
-                    "type": "declarations",
-                    "elements": [
-                        {
-                            "name": "ButtonComponent"
-                        }
-                    ]
-                },
-                {
-                    "type": "imports",
-                    "elements": []
-                },
-                {
-                    "type": "exports",
-                    "elements": [
-                        {
-                            "name": "ButtonComponent"
-                        }
-                    ]
                 },
                 {
                     "type": "bootstrap",
@@ -332,7 +311,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "ApplicationConfig",
-                "defaultValue": "{\r\n  providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes), provideClientHydration(withEventReplay())]\r\n}"
+                "defaultValue": "{\r\n  providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes), provideClientHydration(withEventReplay()), provideAnimationsAsync()]\r\n}"
             },
             {
                 "name": "bootstrap",
@@ -474,7 +453,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "ApplicationConfig",
-                    "defaultValue": "{\r\n  providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes), provideClientHydration(withEventReplay())]\r\n}"
+                    "defaultValue": "{\r\n  providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes), provideClientHydration(withEventReplay()), provideAnimationsAsync()]\r\n}"
                 }
             ],
             "src/main.server.ts": [
@@ -597,7 +576,7 @@
                 "linktype": "component",
                 "name": "ButtonComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/10",
+                "coverageCount": "0/12",
                 "status": "low"
             },
             {

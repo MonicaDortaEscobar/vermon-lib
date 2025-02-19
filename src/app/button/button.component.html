@@ -9,10 +9,10 @@
   [ngStyle]="customStyle"
 >
   @if(icon && iconPosition === 'left'){
-  <span class="material-symbols-outlined"> delete </span>
-  }
-  {{ label }}
-  @if(icon && iconPosition === 'right'){
-  <span class="material-symbols-outlined"> delete </span>
+  <i [ngClass]="icon"></i>
+  } @if(label){
+  <span class="btn-label">{{ label }}</span>
+  } @if(icon && iconPosition === 'right'){
+  <i [ngClass]="icon"></i>
   }
 </button>

@@ -9,7 +9,7 @@
     "components": [
         {
             "name": "AccordionComponent",
-            "id": "component-AccordionComponent-a900da52c0da98033b6aecaada5216eca2449e439d6a9c49c96cd04df6f90f637daa22ee109479316d3db913f5a67e644ddca7fba392ab03526259f12db0f832",
+            "id": "component-AccordionComponent-c1147b0395dc3f8da70ee892f27549ad397d95819f888d4222458828e52321edb249414eff0d1a605fcad05bd5a1b9ea2e9a7c8c28301ea34937444d6e761b99",
             "file": "src/app/accordion/accordion.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -37,13 +37,153 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-accordion',\r\n  imports: [],\r\n  templateUrl: './accordion.component.html',\r\n  styleUrl: './accordion.component.scss'\r\n})\r\nexport class AccordionComponent {\r\n\r\n}\r\n",
+            "sourceCode": "import { Component, Input } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-accordion',\r\n  imports: [],\r\n  templateUrl: './accordion.component.html',\r\n  styleUrl: './accordion.component.scss'\r\n})\r\nexport class AccordionComponent {\r\n}\r\n",
             "styleUrl": "./accordion.component.scss",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",
             "extends": [],
-            "templateData": "<p>accordion works!</p>\r\n"
+            "templateData": "<!-- <div class=\"vermon-accordion\">\r\n  <app-accordion-item [header]=\"'Primer Item'\" [itemId]=\"0\"\r\n    >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras molestie,\r\n    eros at iaculis lacinia, orci nulla molestie diam, eget gravida massa urna\r\n    aliquam neque. Fusce ut nisl id felis suscipit fringilla. Integer eu erat\r\n    aliquam, gravida purus eget, finibus arcu. Vivamus rutrum lorem et lacus\r\n    fermentum, a rutrum nisl iaculis. Nunc ullamcorper nisi sed sapien vehicula\r\n    porttitor. Integer congue erat ac augue vehicula malesuada. Cras et\r\n    imperdiet tortor, id rutrum sem. Fusce sagittis, est ac malesuada finibus,\r\n    libero risus tincidunt mi, ut auctor nulla purus maximus est. Aliquam\r\n    consequat facilisis ligula, a suscipit neque sollicitudin nec. Nullam\r\n    blandit est et arcu feugiat, eget elementum neque faucibus.\r\n  </app-accordion-item>\r\n  <app-accordion-item [header]=\"'Segundo Item'\" [itemId]=\"1\"\r\n    >Nam ac ex nec sem laoreet aliquam ultrices in orci. Donec tincidunt tortor\r\n    nec blandit condimentum. Aliquam id aliquet magna. Cras ac vulputate neque.\r\n    Sed non nulla vitae metus rutrum rutrum. Nullam lobortis dignissim justo,\r\n    nec ornare neque pretium id. Maecenas tempus nulla et sem accumsan, id\r\n    pretium quam convallis. Cras interdum massa id dictum eleifend. Mauris\r\n    vehicula dui rutrum libero tristique convallis. Aenean dignissim, ex a\r\n    rhoncus efficitur, ipsum augue pharetra elit, a euismod lorem nunc ut ex.\r\n    Donec lacinia, tellus luctus placerat pharetra, leo velit tempor magna, sit\r\n    amet maximus nulla nisi ac nibh. In hac habitasse platea dictumst.\r\n  </app-accordion-item>\r\n  <app-accordion-item [header]=\"'Tercer Item'\" [itemId]=\"2\"\r\n    >Maecenas a lacus ultrices, finibus tortor ac, varius sapien. Sed cursus\r\n    consectetur tempus. Aliquam velit neque, auctor sit amet pulvinar vel,\r\n    fermentum vel mauris. Proin accumsan imperdiet lobortis. Nam blandit erat id\r\n    nulla maximus, vitae faucibus magna ullamcorper. Vivamus commodo et mi a\r\n    tempor. Donec dictum non tortor in condimentum. Suspendisse volutpat dui\r\n    purus, sit amet sodales ante iaculis vitae. Ut placerat tempus nulla,\r\n    euismod sodales nulla lobortis et. Praesent ullamcorper nisi mauris, non\r\n    maximus nunc dignissim facilisis. Praesent arcu lorem, molestie vitae diam\r\n    a, semper tempor ante. Curabitur ut metus eu metus dignissim elementum non\r\n    vel magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed\r\n    maximus orci quis libero ullamcorper, eu molestie metus ultrices. Vivamus ac\r\n    interdum erat. Integer pellentesque tristique vestibulum.\r\n  </app-accordion-item>\r\n</div> -->\r\n"
+        },
+        {
+            "name": "AccordionItemComponent",
+            "id": "component-AccordionItemComponent-e2e059f95897e76760a344589464bf0d32b03b8f759f96f717601adfc628bce549e99429fa172221d54910049532e515bffc2c6de66fb6fc05b3f4494ddbd055",
+            "file": "src/app/accordion-item/accordion-item.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-accordion-item",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./accordion-item.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "disabled",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 15,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "header",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 13,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "itemId",
+                    "defaultValue": "0",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 14,
+                    "type": "number",
+                    "decorators": []
+                },
+                {
+                    "name": "rightIcon",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 12,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "accordionItem",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "ElementRef",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 11,
+                    "decorators": [
+                        {
+                            "name": "ViewChild",
+                            "stringifiedArguments": "'accordionItem'"
+                        }
+                    ],
+                    "modifierKind": [
+                        170
+                    ]
+                },
+                {
+                    "name": "collapsed",
+                    "defaultValue": "true",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "boolean",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 16
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "toggleDiv",
+                    "args": [
+                        {
+                            "name": "event",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 18,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "event",
+                            "type": "any",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [
+                {
+                    "name": "CommonModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { CommonModule } from '@angular/common';\r\nimport { Component, ElementRef, Input, ViewChild } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-accordion-item',\r\n  imports: [CommonModule],\r\n  templateUrl: './accordion-item.component.html',\r\n  styleUrl: './accordion-item.component.scss',\r\n})\r\nexport class AccordionItemComponent {\r\n  @ViewChild('accordionItem') accordionItem!: ElementRef;\r\n  @Input() rightIcon: string = '';\r\n  @Input() header: string = '';\r\n  @Input() itemId: number = 0;\r\n  @Input() disabled: boolean = false;\r\n  collapsed: boolean = true\r\n\r\n  toggleDiv(event: any) {\r\n    event.preventDefault();\r\n    this.collapsed = !this.collapsed\r\n  }\r\n}\r\n",
+            "styleUrl": "./accordion-item.component.scss",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<button\r\n  #accordionItem\r\n  class=\"vermon-accordion-item\"\r\n  [ngClass]=\"collapsed ? 'collapsed' : 'expanded'\"\r\n  [attr.data-bs-target]=\"'#' + itemId\"\r\n  (click)=\"toggleDiv($event)\"\r\n>\r\n  <span>{{ header }}</span>\r\n  <i [ngClass]=\"rightIcon\"></i>\r\n</button>\r\n<div\r\n  class=\"accordion-item-description\"\r\n  [ngClass]=\"{ visible: !collapsed }\"\r\n  [attr.id]=\"'accordion-body-' + itemId\"\r\n  [attr.aria-labelledby]=\"'accordion-header-' + itemId\"\r\n>\r\n  @if(!collapsed){\r\n  <ng-content></ng-content>\r\n  }\r\n</div>\r\n"
         },
         {
             "name": "AppComponent",
@@ -240,47 +380,10 @@
             "styleUrlsData": "",
             "stylesData": "",
             "extends": [],
-            "templateData": "<button\r\n  [type]=\"type\"\r\n  [attr.aria-label]=\"label\"\r\n  class=\"btn btn-{{ buttonStyle }} btn-size-{{ size }} btn-shape-{{ shape }} {{\r\n    customClass\r\n  }}\"\r\n  [ngClass]=\"expanded ? 'btn-expanded' : ''\"\r\n  [disabled]=\"disabled\"\r\n  [ngStyle]=\"customStyle\"\r\n>\r\n  @if(icon && iconPosition === 'left'){\r\n  <i [ngClass]=\"icon\"></i>\r\n  } @if(label){\r\n  <span class=\"btn-label\">{{ label }}</span>\r\n  } @if(icon && iconPosition === 'right'){\r\n  <i [ngClass]=\"icon\"></i>\r\n  }\r\n</button>\r\n"
+            "templateData": "<button\r\n  [type]=\"type\"\r\n  [attr.aria-label]=\"label\"\r\n  class=\"btn btn-{{ buttonStyle }} btn-size-{{ size }} btn-shape-{{ shape }}\"\r\n  [ngClass]=\"[expanded ? 'btn-expanded' : '', customClass? customClass : '']\"\r\n  [disabled]=\"disabled\"\r\n  [ngStyle]=\"customStyle\"\r\n>\r\n  @if(icon && iconPosition === 'left'){\r\n  <i [ngClass]=\"icon\"></i>\r\n  } @if(label){\r\n  <span class=\"btn-label\">{{ label }}</span>\r\n  } @if(icon && iconPosition === 'right'){\r\n  <i [ngClass]=\"icon\"></i>\r\n  }\r\n</button>\r\n"
         }
     ],
-    "modules": [
-        {
-            "name": "AccordionModule",
-            "id": "module-AccordionModule-ee66d33877a0963cd718710475ccc6b7ecf5d9725a035a06d61f13ee9bd5af246e570109e828f47c76f901928d5a61c98c7d6a60a358c2f1f06ee0b7ecb00e16",
-            "description": "",
-            "deprecationMessage": "",
-            "deprecated": false,
-            "file": "src/app/accordion/accordion.module.ts",
-            "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\n\r\n\r\n\r\n@NgModule({\r\n  declarations: [],\r\n  imports: [\r\n    CommonModule\r\n  ]\r\n})\r\nexport class AccordionModule { }\r\n",
-            "children": [
-                {
-                    "type": "providers",
-                    "elements": []
-                },
-                {
-                    "type": "declarations",
-                    "elements": []
-                },
-                {
-                    "type": "imports",
-                    "elements": []
-                },
-                {
-                    "type": "exports",
-                    "elements": []
-                },
-                {
-                    "type": "bootstrap",
-                    "elements": []
-                },
-                {
-                    "type": "classes",
-                    "elements": []
-                }
-            ]
-        }
-    ],
+    "modules": [],
     "miscellaneous": {
         "variables": [
             {
@@ -512,6 +615,15 @@
         "count": 7,
         "status": "low",
         "files": [
+            {
+                "filePath": "src/app/accordion-item/accordion-item.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "AccordionItemComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/8",
+                "status": "low"
+            },
             {
                 "filePath": "src/app/accordion/accordion.component.ts",
                 "type": "component",

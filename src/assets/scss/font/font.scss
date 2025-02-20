@@ -1,5 +1,6 @@
 $font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $base-font-size: 16px;
+$font-color: #2E3438;
 
 $fonts-path: 'assets/fonts';
 $bootstrap-icons-fonts-path: '../../../node_modules/bootstrap-icons/font/fonts';
@@ -58,6 +59,14 @@ i{
 
 .fa-user:before {
   content: '\f007';
+}
+
+.fa-chevron-down:before{
+  content: '\f078';
+}
+
+.fa-exclamation-triangle:before{
+  content: '\f071';
 }
 
 .fab {

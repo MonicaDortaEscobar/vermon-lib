@@ -174,6 +174,7 @@ export const Icon: Story = {
 
 export const Custom_Button: Story = {
   args: {
+    // ...Normal.args,
     label: 'Botón',
     type: 'button',
     buttonStyle: 'primary',

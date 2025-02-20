@@ -1,0 +1,76 @@
+@import "/src/styles.scss";
+
+.accordion-container {
+  background-color: $lightgray;
+  border-radius: 5px;
+  .vermon-accordion-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border: 1px solid $accordion-border-color;
+    padding: 0 20px 0 0;
+    border-radius: 5px;
+    background-color: $lightgray;
+    text-align: left;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 0;
+    color: $font-color;
+    cursor: pointer;
+    font-weight: bold;
+    box-sizing: border-box;
+
+    &:disabled {
+      opacity: 0.5;
+    }
+
+    &:not(:disabled):hover {
+      background-color: $accordion-hover-color;
+    }
+
+    &.collapsed {
+      margin-bottom: 5px;
+      i {
+        transition: transform 0.3s ease-in-out;
+      }
+    }
+    &.expanded {
+      border-bottom: none;
+      border-radius: 5px 5px 0 0;
+      i {
+        transform: rotate(180deg);
+        transition: transform 0.3s ease-in-out;
+      }
+    }
+    .vermon-accordion-item-header {
+      display: flex;
+      align-items: center;
+      .leftIcon {
+        border-radius: 2px 0 0 2px;
+        background-color: $accordion-border-color;
+        width: auto;
+        padding: 20px 15px;
+      }
+      .header {
+        margin: 20px 10px 20px 20px;
+      }
+    }
+  }
+}
+
+.vermon-accordion-item-description {
+  border-left: 1px solid $accordion-border-color;
+  border-right: 1px solid $accordion-border-color;
+  border-bottom: 1px solid $accordion-border-color;
+  border-radius: 0px 0px 5px 5px;
+  background-color: $lightgray;
+  height: 0;
+  opacity: 0;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 3px 0;
+  transition: height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  &.visible {
+    margin-bottom: 10px;
+    padding: 25px 20px;
+    opacity: 1;
+    height: auto;
+  }
+}

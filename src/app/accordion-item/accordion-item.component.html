@@ -1,0 +1,39 @@
+<div class="accordion-container">
+  <button
+    #accordionItem
+    class="vermon-accordion-item"
+    [ngClass]="[collapsed ? 'collapsed' : 'expanded']"
+    [attr.data-bs-target]="'#' + itemId"
+    (click)="toggleDiv($event)"
+    [disabled]="disabled"
+    [ngStyle]="customStyle"
+  >
+    <div class="vermon-accordion-item-header">
+      @if(leftIcon){
+      <div class="leftIcon">
+        <i [ngClass]="leftIcon" [ngStyle]="customleftIconStyle"></i>
+      </div>
+      }
+      <div class="header" [ngStyle]="customTitleStyle">
+        <span>{{ header }}</span>
+      </div>
+      @if(titleIcon){
+      <div class="titleIcon">
+        <i [ngClass]="titleIcon" [ngStyle]="customtitleIconStyle"></i>
+      </div>
+      }
+    </div>
+    <i [ngClass]="rightIcon" [ngStyle]="customrightIconStyle"></i>
+  </button>
+</div>
+<div
+  [ngStyle]="customDescriptionStyle"
+  class="vermon-accordion-item-description"
+  [ngClass]="{ visible: !collapsed }"
+  [attr.id]="'accordion-body-' + itemId"
+  [attr.aria-labelledby]="'accordion-header-' + itemId"
+>
+  @if(!collapsed && !disabled){
+  <ng-content></ng-content>
+  }
+</div>

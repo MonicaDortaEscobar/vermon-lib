@@ -1,10 +1,8 @@
 <button
   [type]="type"
   [attr.aria-label]="label"
-  class="btn btn-{{ buttonStyle }} btn-size-{{ size }} btn-shape-{{ shape }} {{
-    customClass
-  }}"
-  [ngClass]="expanded ? 'btn-expanded' : ''"
+  class="btn btn-{{ buttonStyle }} btn-size-{{ size }} btn-shape-{{ shape }}"
+  [ngClass]="[expanded ? 'btn-expanded' : '', customClass? customClass : '']"
   [disabled]="disabled"
   [ngStyle]="customStyle"
 >
